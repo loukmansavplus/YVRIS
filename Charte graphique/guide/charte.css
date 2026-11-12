@@ -1,0 +1,92 @@
+/* Feuille de style du guide YVRIS. Les couleurs (--marine, --accent…) sont injectées depuis couleurs/tokens.json. */
+@page { size: 297mm 210mm; margin: 0 }
+* { box-sizing: border-box; margin: 0; padding: 0 }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact }
+body { font-family: Figtree, Arial, sans-serif; color: var(--encre); font-size: 9.6pt; line-height: 1.42; background: #fff }
+b, strong { font-weight: 600 }
+.page { width: 297mm; height: 210mm; padding: 11mm 15mm 9mm; display: flex; flex-direction: column; page-break-after: always; overflow: hidden; position: relative; background: #fff }
+.page > header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: .4mm solid var(--marine); padding-bottom: 2.6mm; margin-bottom: 5mm; flex: none }
+.kick { font-size: 8pt; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); font-weight: 600 }
+h1 { font-family: Outfit, Arial, sans-serif; font-weight: 800; font-size: 23pt; line-height: 1.05; color: var(--marine) }
+h2 { font-family: Outfit, Arial, sans-serif; font-weight: 600; font-size: 11.5pt; color: var(--marine); margin-bottom: 1.8mm }
+h3 { font-family: Outfit, Arial, sans-serif; font-weight: 600; font-size: 10pt; color: var(--marine) }
+.lead { font-size: 8.4pt; color: var(--gris_texte); text-align: right; max-width: 95mm }
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 4.5mm }
+.page > footer { flex: none; margin-top: 3mm; font-size: 7.6pt; color: var(--gris_texte); display: flex; justify-content: space-between }
+p.note, .note { font-size: 8.6pt; color: var(--gris_texte) }
+small { font-size: 8pt; color: var(--gris_texte) }
+.g { display: grid; gap: 6mm }
+.g2 { grid-template-columns: 1fr 1fr } .g3 { grid-template-columns: repeat(3, 1fr) } .g4 { grid-template-columns: repeat(4, 1fr) }
+.fill { flex: 1; min-height: 0 }
+.card { background: var(--blanc_casse); border: .25mm solid var(--gris_clair); border-radius: 2.5mm; padding: 4mm 4.5mm }
+.card.dark { background: var(--marine); color: #fff; border: 0 } .card.dark h2, .card.dark h3 { color: #fff }
+ul { list-style: none }
+ul.ok li, ul.no li, ul.dot li { padding: .9mm 0 .9mm 5.5mm; position: relative }
+ul.ok li::before { content: "✓"; position: absolute; left: 0; color: var(--succes); font-weight: 700 }
+ul.no li::before { content: "✕"; position: absolute; left: 0; color: var(--accent); font-weight: 700 }
+ul.dot li::before { content: ""; position: absolute; left: .8mm; top: 2.6mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--accent) }
+table { width: 100%; border-collapse: collapse; font-size: 8.6pt }
+th { text-align: left; font-weight: 600; font-size: 7.6pt; letter-spacing: .08em; text-transform: uppercase; color: var(--gris_texte); padding: 1mm 1.5mm; border-bottom: .3mm solid var(--marine) }
+td { padding: 1.15mm 1.5mm; border-bottom: .2mm solid var(--gris_clair); vertical-align: middle }
+.num { font-variant-numeric: tabular-nums; white-space: nowrap }
+.center { display: flex; align-items: center; justify-content: center }
+.tag { display: inline-block; font-size: 7.4pt; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .6mm 2.2mm; border-radius: 10mm }
+.tag.oui { background: #E3F4EC; color: var(--succes) } .tag.non { background: #FBE6E3; color: var(--erreur) }
+.cap { font-size: 7.8pt; color: var(--gris_texte); margin-top: 1.5mm }
+
+/* Couverture et intercalaires */
+.page.cover { background: linear-gradient(135deg, var(--marine) 0%, var(--marine) 45%, var(--prune) 100%); color: #fff; padding: 20mm 22mm }
+.cover h1 { color: #fff; font-size: 46pt; line-height: 1 } .cover h1 i { font-style: normal; color: var(--accent) }
+.cover .meta { font-size: 9.5pt; opacity: .8 }
+
+/* Tuiles logo */
+.tile { border-radius: 2.5mm; position: relative; display: flex; align-items: center; justify-content: center; gap: 7mm; min-height: 38mm }
+.tile > span.l { position: absolute; left: 3.5mm; bottom: 2.4mm; font-size: 7.6pt }
+.tile.line { border: .25mm solid var(--gris_clair) }
+
+/* Nuancier */
+.sw { border-radius: 2mm; padding: 3mm 3.4mm; display: flex; flex-direction: column; font-size: 7.8pt; line-height: 1.35 }
+.sw b { font-family: Outfit, Arial, sans-serif; font-size: 10.5pt; white-space: nowrap }
+.sw .role { margin-top: auto; opacity: .85 }
+.sw.s { padding: 2.2mm 2.6mm; font-size: 7.1pt } .sw.s b { font-size: 8.6pt }
+.ech { display: inline-block; width: 15mm; text-align: center; border-radius: 1mm; font-weight: 600; padding: .5mm 0; border: .2mm solid var(--gris_clair) }
+
+/* Icônes */
+.ico { width: 13mm; height: 13mm; border-radius: 3mm; background: #fff; border: .25mm solid var(--gris_clair); display: flex; align-items: center; justify-content: center; color: var(--marine); flex: none }
+.ico svg { width: 7mm; height: 7mm }
+.ico.dark { background: var(--marine); color: #fff; border: 0 } .ico.acc { background: var(--accent); color: #fff; border: 0 }
+.icorow { display: flex; align-items: center; gap: 3mm }
+
+/* Composants */
+.btn { display: inline-block; font-family: Outfit, Arial, sans-serif; font-weight: 600; font-size: 9pt; letter-spacing: .04em; text-transform: uppercase; padding: 2.4mm 5mm; border-radius: 1.6mm; background: var(--accent); color: #fff; white-space: nowrap }
+.btn.ghost { background: transparent; border: .35mm solid currentColor; color: var(--marine) } .btn.navy { background: var(--marine) }
+.pill { display: inline-block; font-size: 8pt; font-weight: 600; padding: 1mm 3mm; border-radius: 10mm; border: .3mm solid var(--gris_clair); background: #fff; white-space: nowrap }
+
+/* Mises en situation à plat */
+.scene { position: relative; overflow: hidden; border-radius: 3mm; background: radial-gradient(120% 140% at 20% 0%, #F3F4F7 0%, #E4E5EB 55%, #D6D8E0 100%) }
+.obj { position: absolute } .obj > .z { box-shadow: 0 3mm 7mm rgba(12, 13, 59, .20), 0 .5mm 1.2mm rgba(12, 13, 59, .22) }
+.obj.flat > .z { box-shadow: 0 1.2mm 3mm rgba(12, 13, 59, .18) }
+
+/* Objets à taille réelle (mis à l'échelle par zoom) */
+.carte { width: 85mm; height: 55mm; position: relative; overflow: hidden; background: #fff; border-radius: 1mm }
+.a4p { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: #fff }
+.a5p { width: 148mm; height: 210mm; position: relative; overflow: hidden; background: #fff; border-radius: 1.5mm }
+.dl { width: 220mm; height: 110mm; position: relative; overflow: hidden; background: #fff }
+.badge { width: 54mm; height: 86mm; position: relative; overflow: hidden; background: #fff; border-radius: 2.5mm }
+.rollup { width: 850mm; height: 2000mm; position: relative; overflow: hidden; background: #fff }
+.slide { width: 254mm; height: 142.875mm; position: relative; overflow: hidden; background: #fff }
+.px { position: relative; overflow: hidden }
+.abs { position: absolute }
+.outfit { font-family: Outfit, Arial, sans-serif }
+.lines > i { display: block; height: 1.6mm; border-radius: 1mm; background: var(--gris_clair); margin-bottom: 3.4mm }
+
+/* Ordinateur */
+.laptop { display: inline-block }
+.laptop .scr { border: 2.2mm solid #14151B; border-bottom-width: 3mm; border-radius: 2.6mm 2.6mm 0 0; background: #14151B; overflow: hidden }
+.laptop .scr img { display: block; width: 100% }
+.laptop .base { height: 2.6mm; margin: 0 -7%; border-radius: 0 0 4mm 4mm; background: linear-gradient(#C9CCD4, #9FA3AE) }
+
+/* Cotes (plans) */
+.cote { position: absolute; font-size: 7.4pt; color: var(--accent); font-weight: 600; white-space: nowrap }
+.cote.h { border-top: .25mm solid var(--accent); text-align: center; padding-top: .6mm }
+.cote.v { border-left: .25mm solid var(--accent); display: flex; align-items: center; padding-left: 1.2mm }

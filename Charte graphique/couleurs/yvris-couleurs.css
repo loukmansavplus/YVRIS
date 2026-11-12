@@ -1,0 +1,19 @@
+/* Couleurs et polices YVRIS — généré depuis tokens.json */
+:root {
+  --yvris-marine: #0C0D3B;
+  --yvris-prune: #251534;
+  --yvris-accent: #E33A2C;
+  --yvris-blanc: #FFFFFF;
+  --yvris-blanc-casse: #FBFBFD;
+  --yvris-gris-clair: #E7E7EA;
+  --yvris-gris-texte: #4A4A5E;
+  --yvris-encre: #13123A;
+  --yvris-succes: #1E8E5A;
+  --yvris-alerte: #D98E04;
+  --yvris-erreur: #B3261E;
+  --yvris-bleu: #2B42F5;
+  --yvris-mauve: #8487F0;
+  --yvris-degrade: linear-gradient(135deg, #0C0D3B 40%, #251534);
+  --yvris-police-titres: 'Outfit', Arial, sans-serif;
+  --yvris-police-texte: 'Figtree', Arial, sans-serif;
+}

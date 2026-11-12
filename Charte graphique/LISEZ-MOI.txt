@@ -1,0 +1,45 @@
+CHARTE GRAPHIQUE YVRIS — Version 1.0, novembre 2026
+====================================================
+
+PAR OÙ COMMENCER
+  guide\YVRIS-charte-graphique.pdf      Le guide complet (27 pages). C'est le document de référence.
+  guide\YVRIS-planche-validation.pdf    Résumé en 2 pages, avec les 3 choix à confirmer.
+
+CONTENU DU DOSSIER
+  logo\                 Logo et monogramme, en marine, blanc et noir.
+      *.svg, pdf\       Vectoriel : impression, enseigne, grand format.
+      png\              Fond transparent : Word, PowerPoint, réseaux sociaux.
+  couleurs\             tokens.json (valeurs de référence), yvris-couleurs.css (web), yvris-nuancier.pdf.
+  polices\              Outfit (titres) et Figtree (texte). Fichiers .ttf à installer pour Word et PowerPoint
+                        (double-clic puis « Installer »). Fichiers .woff2 pour le web. Licence libre SIL OFL.
+  gabarits\             carte-de-visite.pdf            85 x 55 mm + 3 mm de fond perdu, recto et verso
+                        papier-en-tete.docx / .pdf     A4
+                        enveloppe-DL.pdf               220 x 110 mm
+                        cahier-A5-couverture.pdf       148 x 210 mm
+                        bloc-notes-A5.pdf              148 x 210 mm
+                        badge.pdf                      54 x 86 mm
+                        roll-up-85x200.pdf             taille réelle
+                        enseigne-3000x800-echelle-1-10.pdf   panneau 3 m x 0,8 m, à l'échelle 1/10
+                        YVRIS-presentation.pptx        4 diapositives modèles
+                        signature-email.html           à copier-coller dans Gmail ou Outlook
+                        reseaux-sociaux\               avatar, bannière LinkedIn, publication, story
+                        icones\                        14 icônes SVG
+  mises-en-situation\   Les visuels du guide en images + consignes pour générer des photos réalistes.
+
+CHOIX RETENUS PAR DÉFAUT (modifiables)
+  Bleu marine   #0C0D3B   celui du logo officiel de yvris.net
+  Accent        #E33A2C   rouge, dans la continuité du site et de la brochure
+  Signature     « Une agilité sans limites. »
+  Polices       Outfit et Figtree, celles du site yvris.net
+
+POUR MODIFIER UNE COULEUR OU LA SIGNATURE
+  1. Changer la valeur dans couleurs\tokens.json
+  2. Lancer : python guide\build_guide.py   puis   python gabarits\build_gabarits.py
+  Tout le guide et tous les gabarits sont régénérés avec la nouvelle valeur.
+
+À SAVOIR
+  - Le logo vectoriel a été retracé à partir du PNG officiel (721 px). Si le fichier source d'origine
+    existe (AI, SVG, PDF), il doit remplacer les fichiers du dossier logo\.
+  - Les valeurs CMJN sont une conversion approchée : demander une épreuve à l'imprimeur avant tirage.
+  - Les noms, fonctions et mentions légales (RCCM, IFU) sont à compléter dans les gabarits.
+  - Le modèle Word utilise Arial pour s'afficher correctement sur tous les postes.

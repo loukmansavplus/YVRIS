@@ -1,0 +1,6 @@
+Polices de la marque YVRIS (déjà utilisées sur yvris.net)
+- Outfit  : titres        https://fonts.google.com/specimen/Outfit
+- Figtree : texte courant https://fonts.google.com/specimen/Figtree
+Licence : SIL Open Font License (usage gratuit, print et web, commercial inclus).
+Les fichiers .woff2 servent au web ; pour Word/PowerPoint/Canva, installer les versions .ttf depuis les liens ci-dessus.
+Police de repli si non installée : Arial.

@@ -1,0 +1,7 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python compiled
+__pycache__/
+*.pyc
