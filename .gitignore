@@ -5,3 +5,6 @@ Thumbs.db
 # Python compiled
 __pycache__/
 *.pyc
+
+# Assistant internal data (not part of the project)
+.workbuddy-ai/
