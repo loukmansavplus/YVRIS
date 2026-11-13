@@ -374,13 +374,33 @@ add("8 · Les applications", "Brochure", "La charte appliquée à une plaquette 
     <p class="note" style="margin-top:3mm">La brochure actuelle est un PDF d'images, non modifiable. Sa refonte en version éditable suit ces deux pages modèles.</p></div>
 </div>""")
 
+# Photomontages : décors du dossier « PHOTO CAS USAGE », visuels posés par mises-en-situation/build_photos.py
+def photo(name, cap, h=None):
+    src = f"../mises-en-situation/photos/photo-{name}.jpg"
+    img = (f'<img src="{src}" style="display:block;height:{h}mm;width:auto;border-radius:2.5mm">' if h else
+           f'<img src="{src}" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2.5mm">')
+    return f'<div>{img}<div class="cap">{cap}</div></div>'
+add("8 · Les applications", "Aperçu en situation réelle", "Ce que donne la charte une fois imprimée, brodée ou posée.", f"""
+<div class="g g3" style="gap:5mm">{photo("enseigne", "<b>Enseigne</b> : logo blanc sur panneau marine, filet rouge en pied.")}
+  {photo("carte-de-visite", "<b>Carte de visite</b> : recto marine, verso blanc.")}{photo("papeterie", "<b>Cahier, bloc-notes et stylo</b>")}</div>
+<div style="display:flex;gap:5mm;justify-content:space-between">{photo("polo", "<b>Polos</b> : marine ou blanc, logo côté cœur, liseré rouge discret.", 71)}
+  {photo("roll-up", "<b>Roll-up</b> 85 × 200 cm", 71)}{photo("badge", "<b>Badge</b> 54 × 86 mm", 71)}{photo("brochure", "<b>Brochure</b> A4", 71)}</div>
+<p class="note"><b>Photomontages indicatifs.</b> Les décors sont générés par IA ; le logo et les visuels viennent des fichiers de la charte et sont posés ensuite, comme le demande la page « Photographies ». Teintes et finitions restent à valider sur épreuve.</p>""")
+
+add("8 · Les applications", "Aperçu en situation réelle (suite)", "Variantes et autres supports.", f"""
+<div style="display:flex;gap:5mm">{photo("enseigne-claire", "<b>Enseigne sur façade claire</b> : logo marine en lettres découpées.", 72)}
+  {photo("polo-2", "<b>Polos sur mannequin</b> : marine et blanc, logo côté cœur.", 72)}</div>
+<div style="display:flex;gap:6mm;align-items:flex-start">{photo("badges", "<b>Badges</b> : le même gabarit pour toute l'équipe.", 56)}
+  <div class="card" style="flex:1"><h2>À retenir</h2><ul class="dot"><li>L'enseigne de référence reste le <b>panneau marine à logo blanc</b>. Sur une façade claire, le logo marine est la version prévue pour les fonds blancs : variante à valider avant fabrication.</li>
+    <li>Polo marine ou blanc uniquement. Le rouge reste un liseré, jamais la couleur du vêtement.</li><li>Un porte-badge plus large que 54 mm se remplit en élargissant les bandeaux, <b>sans étirer le logo</b>.</li></ul></div></div>""")
+
 # ================= 9. RÉCAPITULATIF =================
 add("9 · En pratique", "Avant de diffuser un support", "Dix vérifications, puis les fichiers à utiliser.", f"""
 <div class="g fill" style="grid-template-columns:1.1fr 1fr 1fr">
   <div><h2>Liste de contrôle</h2><ul class="ok"><li>Le logo vient du dossier <b>logo/</b>, sans modification.</li><li>Sa zone de protection et sa taille minimale sont respectées.</li><li>Seules les couleurs de la charte sont utilisées.</li><li>Le rouge ne dépasse pas 10 % de la surface.</li><li>Titres en Outfit, texte en Figtree (ou Arial).</li>
     <li>Aucun texte sous 8 pt.</li><li>Les captures montrent le vrai logiciel, avec des données de démonstration.</li><li>Les photos sont libres de droits et sans autre marque.</li><li>Une seule idée et une seule action par page.</li><li>Coordonnées et orthographe vérifiées.</li></ul></div>
   <div><h2>Fichiers fournis</h2><table><tr><td><b>logo/</b></td><td>Logo et monogramme : marine, blanc, noir. SVG, PDF, PNG.</td></tr><tr><td><b>couleurs/</b></td><td>Valeurs de référence, variables pour le web, nuancier.</td></tr><tr><td><b>polices/</b></td><td>Outfit et Figtree, avec la licence.</td></tr>
-    <tr><td><b>gabarits/</b></td><td>Carte, papier à en-tête, enveloppe, cahier, bloc-notes, badge, roll-up, enseigne, présentation, signature, réseaux sociaux, icônes.</td></tr><tr><td><b>mises-en-situation/</b></td><td>Les visuels de ce guide en images.</td></tr></table></div>
+    <tr><td><b>gabarits/</b></td><td>Carte, papier à en-tête, enveloppe, cahier, bloc-notes, badge, roll-up, enseigne, présentation, signature, réseaux sociaux, icônes.</td></tr><tr><td><b>mises-en-situation/</b></td><td>Les visuels de ce guide en images, et les photomontages (dossier photos/).</td></tr></table></div>
   <div style="display:flex;flex-direction:column;gap:4mm"><div><h2>Imprimeurs et prestataires</h2><ul class="dot"><li>Travailler à partir des fichiers <b>SVG ou PDF</b>.</li><li>Demander une épreuve couleur avant tirage.</li><li>En cas de doute, ce guide fait référence.</li></ul></div>
     <div class="card dark" style="margin-top:auto;background:linear-gradient(135deg,{M} 40%,{P})">{logo("blanc", 11)}<div style="margin-top:4mm">{contact_lines("#fff", "8.6pt", "1.3mm")}</div></div></div>
 </div>""")

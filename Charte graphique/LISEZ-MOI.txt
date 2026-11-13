@@ -2,7 +2,7 @@ CHARTE GRAPHIQUE YVRIS — Version 1.0, novembre 2026
 ====================================================
 
 PAR OÙ COMMENCER
-  guide\YVRIS-charte-graphique.pdf      Le guide complet (27 pages). C'est le document de référence.
+  guide\YVRIS-charte-graphique.pdf      Le guide complet (29 pages). C'est le document de référence.
   guide\YVRIS-planche-validation.pdf    Résumé en 2 pages, avec les 3 choix à confirmer.
 
 CONTENU DU DOSSIER
@@ -25,6 +25,9 @@ CONTENU DU DOSSIER
                         reseaux-sociaux\               avatar, bannière LinkedIn, publication, story
                         icones\                        14 icônes SVG
   mises-en-situation\   Les visuels du guide en images + consignes pour générer des photos réalistes.
+      photos\            10 photomontages réalistes (enseignes, carte, papeterie, polos, roll-up, badges, brochure).
+                        Décors IA du dossier « PHOTO CAS USAGE », logo et visuels de la charte posés par-dessus.
+                        Pour les refaire : uv run --with playwright python mises-en-situationuild_photos.py
 
 CHOIX RETENUS PAR DÉFAUT (modifiables)
   Bleu marine   #0C0D3B   celui du logo officiel de yvris.net
